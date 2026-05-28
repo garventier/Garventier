@@ -4,8 +4,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <img src="/logos/logo-gold.png" alt="Garventier" />
-          <span>GARVENTIER</span>
+          <img src="/logos/logo-primary-gold-white.png" alt="Garventier" />
         </div>
 
         <p>

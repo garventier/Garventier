@@ -56,7 +56,8 @@ a {
 }
 
 .brand img {
-  width: 34px;
+  height: 36px;
+  width: auto;
 }
 
 .brand span {
@@ -204,7 +205,8 @@ nav a {
 }
 
 .footer-brand img {
-  width: 36px;
+  height: 40px;
+  width: auto;
 }
 
 .footer-brand span {

@@ -4,8 +4,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-inner">
         <div className="brand">
-          <img src="/logos/logo-gold.png" alt="Garventier" />
-          <span>GARVENTIER</span>
+          <img src="/logos/logo-primary-gold-white.png" alt="Garventier" />
         </div>
 
         <nav>

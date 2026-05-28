@@ -4,7 +4,7 @@ export default function Insights() {
     <section className="insights-section">
       <div className="container insights-grid">
         <div>
-          <img src="/images/article.jpg" alt="Featured Article" />
+          <img src="/images/article-on-inevitabilities.jpg" alt="Featured Article" />
         </div>
 
         <div className="insights-copy">

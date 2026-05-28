@@ -15,7 +15,10 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata = {
   title: 'Garventier',
-  description: 'Independent. Aligned. Enduring.'
+  description: 'Independent. Aligned. Enduring.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

@@ -24,7 +24,7 @@ export default function About() {
         </div>
 
         <div>
-          <img src="/images/founder.jpg" alt="Founder" />
+          <img src="/images/founder-portrait.jpg" alt="Founder" />
         </div>
       </div>
     </section>
