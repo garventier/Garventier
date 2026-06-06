@@ -226,8 +226,10 @@
   /* ─── STANDARD SECTION PAGE ─── */
   .section-page {
     min-height: 1123px;
+    height: 1123px;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   .section-header {
@@ -264,6 +266,8 @@
     display: flex;
     flex-direction: column;
     gap: 36px;
+    overflow: hidden;
+    min-height: 0;
   }
 
   /* ─── STAT BLOCKS ─── */
@@ -893,6 +897,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
+    flex-shrink: 0;
   }
 
   .footer-institute {
@@ -924,8 +929,88 @@
 
   /* ─── PRINT ─── */
   @media print {
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    html, body {
+      width: 210mm;
+      background: white !important;
+    }
+
     body { background: white; }
-    .page { margin: 0; page-break-after: always; box-shadow: none; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      /* prevent partial page bleeds */
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* keep these atomic — never split across a page */
+    .stat-row,
+    .exit-card,
+    .city-card,
+    .coalition-card,
+    .req-grid,
+    .global-model-box,
+    .pull-quote,
+    .roadmap-year,
+    .reform-list-item,
+    .toc-item,
+    .data-table,
+    .scenario-table,
+    .cost-table {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* section headers stay with their first body block */
+    .section-header {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* headings never orphaned at bottom of page */
+    h1, h2, h3,
+    .section-label,
+    .reform-tag,
+    .year-header {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* never leave a lone line at top or bottom */
+    .body-text p,
+    .city-bullets li,
+    .coalition-card-body li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* force backgrounds and colors to print */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* hide screen-only chrome */
+    .page-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 
   /* ─── SCREEN ─── */
