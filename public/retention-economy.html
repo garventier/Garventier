@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Retention Economy — AmericaNext Institute</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+  :root {
+    --navy: #0d1b2a;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --gray-100: #f4f4f4;
+    --gray-200: #e8e8e8;
+    --gray-500: #888888;
+    --gray-700: #444444;
+    --red: #b94040;
+    --green: #2a6b4a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e8e8e8;
+    color: var(--navy);
+  }
+
+  /* ─── PAGE WRAPPER ─── */
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    background: var(--white);
+    margin: 24px auto;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  /* ─── COVER PAGE ─── */
+  .cover {
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    min-height: 1123px;
+  }
+
+  .cover-top {
+    padding: 56px 64px 0;
+  }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 64px;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 0.92;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .cover-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+  }
+
+  .cover-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin: 28px 0;
+  }
+
+  .cover-tagline {
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.45;
+    max-width: 440px;
+  }
+
+  .cover-tagline em {
+    font-style: normal;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  .cover-stats-row {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 56px;
+  }
+
+  .cover-stat {
+    flex: 1;
+    padding: 32px 32px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+  .cover-stat:last-child { border-right: none; }
+
+  .cover-stat-num {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .cover-stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+
+  .cover-bottom {
+    padding: 28px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .cover-institute {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .cover-date {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.08em;
+  }
+
+  /* ─── CONTENTS PAGE ─── */
+  .contents-page {
+    padding: 72px 64px;
+    min-height: 1123px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+  }
+
+  .contents-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 56px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+  }
+
+  .toc-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .toc-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    min-width: 28px;
+    padding-top: 2px;
+  }
+
+  .toc-content {}
+
+  .toc-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 3px;
+  }
+
+  .toc-desc {
+    font-size: 11px;
+    color: var(--gray-500);
+    line-height: 1.4;
+  }
+
+  /* ─── STANDARD SECTION PAGE ─── */
+  .section-page {
+    min-height: 1123px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 48px 64px 44px;
+  }
+
+  .section-header .section-label {
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .section-header .subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    max-width: 480px;
+  }
+
+  .section-body {
+    padding: 48px 64px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  /* ─── STAT BLOCKS ─── */
+  .stat-row {
+    display: grid;
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+  }
+
+  .stat-row-3 { grid-template-columns: repeat(3, 1fr); }
+  .stat-row-2 { grid-template-columns: repeat(2, 1fr); }
+  .stat-row-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .stat-cell {
+    background: var(--white);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stat-cell.dark {
+    background: var(--navy);
+  }
+
+  .stat-num {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-cell.dark .stat-num {
+    color: var(--gold);
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gray-500);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .stat-cell.dark .stat-label {
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ─── BODY TEXT ─── */
+  .body-text {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--gray-700);
+  }
+
+  .body-text p + p {
+    margin-top: 16px;
+  }
+
+  .body-text strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* ─── PULL QUOTE ─── */
+  .pull-quote {
+    border-left: 4px solid var(--gold);
+    padding: 16px 24px;
+    background: var(--cream);
+  }
+
+  .pull-quote p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* ─── DATA TABLE ─── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .data-table thead tr {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .data-table thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .data-table tbody tr:nth-child(even) {
+    background: var(--gray-100);
+  }
+
+  .data-table tbody td {
+    padding: 12px 16px;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+
+  .data-table .highlight {
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  .data-table .pos {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  /* ─── EXIT INTERVIEW CARDS ─── */
+  .exit-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .exit-card {
+    border-top: 3px solid var(--gold);
+    padding: 24px;
+    background: var(--gray-100);
+  }
+
+  .exit-card-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .exit-card-topic {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .exit-card-text {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.55;
+  }
+
+  /* ─── REFORM HEADER ─── */
+  .reform-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
+
+  /* ─── REQUIREMENTS GRID ─── */
+  .req-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    margin-top: 4px;
+  }
+
+  .req-cell {
+    background: var(--white);
+    padding: 20px;
+  }
+
+  .req-actor {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .req-text {
+    font-size: 12px;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+
+  /* ─── GLOBAL MODEL BOX ─── */
+  .global-model-box {
+    background: var(--navy);
+    color: var(--white);
+    padding: 20px 24px;
+    margin-top: 4px;
+  }
+
+  .global-model-box .gm-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .global-model-box p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.55;
+  }
+
+  /* ─── RELOCATION BAR CHART ─── */
+  .bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bar-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 48px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bar-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: right;
+  }
+
+  .bar-track {
+    background: var(--gray-200);
+    height: 32px;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--navy);
+  }
+
+  .bar-fill.gold { background: var(--gold); }
+
+  .bar-pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* ─── GLOBAL MODELS PAGE ─── */
+  .city-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .city-card {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+  }
+
+  .city-sidebar {
+    background: var(--navy);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .city-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .city-country {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .city-content {
+    padding: 24px;
+  }
+
+  .city-bullets {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+
+  .city-bullets li {
+    font-size: 13px;
+    color: var(--gray-700);
+    padding: 4px 0 4px 14px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .city-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .city-result {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green);
+    padding-top: 10px;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  /* ─── ECONOMIC MODEL ─── */
+  .scenario-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .scenario-table thead th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .scenario-table tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-700);
+    vertical-align: middle;
+  }
+
+  .scenario-table tbody tr.base td {
+    background: var(--cream);
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .scenario-table .impact-col {
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  /* ─── COST-RETURN TABLE ─── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .cost-table thead th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 16px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .cost-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-700);
+    vertical-align: top;
+  }
+
+  .cost-table tbody tr:nth-child(even) td {
+    background: var(--gray-100);
+  }
+
+  .cost-table .total-row td {
+    background: var(--navy) !important;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .cost-table .total-row .impact-col {
+    color: var(--gold-light);
+  }
+
+  /* ─── COALITION MAP ─── */
+  .coalition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .coalition-card {
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+  }
+
+  .coalition-card-header {
+    background: var(--navy);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .coalition-actor {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .coalition-role {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.15);
+    padding: 3px 8px;
+  }
+
+  .coalition-card-body {
+    padding: 16px 20px;
+  }
+
+  .coalition-card-body ul {
+    list-style: none;
+  }
+
+  .coalition-card-body li {
+    font-size: 12px;
+    color: var(--gray-700);
+    padding: 5px 0 5px 14px;
+    position: relative;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .coalition-card-body li:last-child {
+    border-bottom: none;
+  }
+
+  .coalition-card-body li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 6px;
+  }
+
+  /* ─── ROADMAP ─── */
+  .roadmap-year {
+    margin-bottom: 32px;
+  }
+
+  .year-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .year-badge {
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    text-transform: uppercase;
+  }
+
+  .year-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .roadmap-items {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0;
+  }
+
+  .roadmap-q {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-200);
+    letter-spacing: 0.06em;
+  }
+
+  .roadmap-action {
+    font-size: 13px;
+    color: var(--gray-700);
+    padding: 10px 0 10px 16px;
+    border-bottom: 1px solid var(--gray-200);
+    line-height: 1.4;
+  }
+
+  /* ─── CLOSING PAGE ─── */
+  .closing-page {
+    background: var(--navy);
+    color: var(--white);
+    min-height: 1123px;
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .closing-main {}
+
+  .closing-page .section-label {
+    color: var(--gold);
+    margin-bottom: 40px;
+  }
+
+  .closing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 0.95;
+    margin-bottom: 48px;
+  }
+
+  .closing-body {
+    max-width: 580px;
+  }
+
+  .closing-body p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+  }
+
+  .closing-body p strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .closing-quote {
+    border-left: 3px solid var(--gold);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .closing-quote p {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .closing-sig {
+    margin-top: 48px;
+  }
+
+  .sig-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .sig-title {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  .closing-footer {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .closing-footer .institute {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ─── PAGE FOOTER ─── */
+  .page-footer {
+    padding: 18px 64px;
+    border-top: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .footer-institute {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+
+  .footer-title {
+    font-size: 10px;
+    color: var(--gray-500);
+    letter-spacing: 0.08em;
+  }
+
+  /* ─── SECTION DIVIDERS ─── */
+  .divider {
+    height: 1px;
+    background: var(--gray-200);
+  }
+
+  .gold-divider {
+    height: 2px;
+    background: var(--gold);
+    width: 40px;
+    margin: 12px 0;
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; }
+    .page { margin: 0; page-break-after: always; box-shadow: none; }
+  }
+
+  /* ─── SCREEN ─── */
+  @media screen {
+    body { padding: 24px 0 48px; }
+    .page { box-shadow: 0 4px 32px rgba(0,0,0,0.12); }
+  }
+
+  /* ─── TWO-COL LAYOUT ─── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .two-col-wide {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+  }
+
+  /* ─── REFORM LIST ─── */
+  .reform-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--gray-200);
+  }
+
+  .reform-list-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: stretch;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .reform-list-item:last-child {
+    border-bottom: none;
+  }
+
+  .reform-list-tag {
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+  }
+
+  .reform-list-content {
+    padding: 16px 20px;
+  }
+
+  .reform-list-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+
+  .reform-list-desc {
+    font-size: 12px;
+    color: var(--gray-500);
+    line-height: 1.4;
+  }
+
+  /* relocation bars */
+  .reloc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .reloc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .reloc-bar-wrap {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    background: var(--gray-100);
+  }
+
+  .reloc-bar {
+    width: 100%;
+    background: var(--navy);
+    transition: height 0.3s;
+  }
+
+  .reloc-pct {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .reloc-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     COVER PAGE
+══════════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="cover-top">
+    <div class="cover-eyebrow">AmericaNext Institute · Policy Platform · 2026</div>
+    <div class="cover-title">THE<br>RETENTION<br>ECONOMY</div>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">A Policy Platform for NYC Small Business</div>
+    <div style="margin-top: 40px;">
+      <div class="cover-tagline">New York's challenge is<br>not capability. <em>It is policy.</em></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cover-stats-row">
+      <div class="cover-stat">
+        <span class="cover-stat-num">+$4.2B</span>
+        <span class="cover-stat-label">Estimated annual net positive by Year 3</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">9</span>
+        <span class="cover-stat-label">Reforms proposed</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">6</span>
+        <span class="cover-stat-label">Global models referenced</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">0</span>
+        <span class="cover-stat-label">Federal actions required</span>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <span class="cover-institute">AmericaNext Institute</span>
+      <span class="cover-date">MAY 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     CONTENTS
+══════════════════════════════════════════════ -->
+<div class="page contents-page">
+  <div class="section-label">Contents</div>
+  <div class="contents-title">What's Inside</div>
+
+  <div class="toc-grid">
+    <div class="toc-item">
+      <div class="toc-num">01</div>
+      <div class="toc-content">
+        <div class="toc-name">Executive Summary</div>
+        <div class="toc-desc">The case for retention over recruitment</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">02</div>
+      <div class="toc-content">
+        <div class="toc-name">The Problem</div>
+        <div class="toc-desc">What New York is actually losing</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">03</div>
+      <div class="toc-content">
+        <div class="toc-name">Why They Leave</div>
+        <div class="toc-desc">Exit interviews from a city in denial</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">04</div>
+      <div class="toc-content">
+        <div class="toc-name">The Policy Platform</div>
+        <div class="toc-desc">Nine reforms, zero federal action required</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R1</div>
+      <div class="toc-content">
+        <div class="toc-name">Commercial Rent Stabilization</div>
+        <div class="toc-desc">Predictability is the foundation of planning</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R2</div>
+      <div class="toc-content">
+        <div class="toc-name">Permit Modernization</div>
+        <div class="toc-desc">The 90-day guarantee</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R3</div>
+      <div class="toc-content">
+        <div class="toc-name">SBA Access Bridge</div>
+        <div class="toc-desc">Closing the non-citizen capital gap</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R4</div>
+      <div class="toc-content">
+        <div class="toc-name">Living-Wage Flex Credit</div>
+        <div class="toc-desc">Small business wage subsidy</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R5</div>
+      <div class="toc-content">
+        <div class="toc-name">Micro-Enterprise Hubs</div>
+        <div class="toc-desc">Neighborhood commercial anchors</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R6</div>
+      <div class="toc-content">
+        <div class="toc-name">One-Shot for Business</div>
+        <div class="toc-desc">Emergency financial infrastructure</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R7</div>
+      <div class="toc-content">
+        <div class="toc-name">Procurement Reform</div>
+        <div class="toc-desc">30% set-aside, guaranteed</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R8</div>
+      <div class="toc-content">
+        <div class="toc-name">Tax Simplification</div>
+        <div class="toc-desc">One filing, one window</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">R9</div>
+      <div class="toc-content">
+        <div class="toc-name">Nighttime Economy Office</div>
+        <div class="toc-desc">Infrastructure for after dark</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">14</div>
+      <div class="toc-content">
+        <div class="toc-name">Global Models</div>
+        <div class="toc-desc">What Amsterdam, Singapore &amp; Seoul figured out</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">15</div>
+      <div class="toc-content">
+        <div class="toc-name">Economic Model</div>
+        <div class="toc-desc">+$4.2B — the numbers behind the number</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">16</div>
+      <div class="toc-content">
+        <div class="toc-name">Coalition Map</div>
+        <div class="toc-desc">Who needs to move</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">17</div>
+      <div class="toc-content">
+        <div class="toc-name">Implementation Roadmap</div>
+        <div class="toc-desc">Year 1 / Year 2 / Year 3</div>
+      </div>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">18</div>
+      <div class="toc-content">
+        <div class="toc-name">Closing</div>
+        <div class="toc-desc">New York, by choice</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     01 — EXECUTIVE SUMMARY
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">01 — Executive Summary</div>
+    <h1>The Cheapest Business<br>to Attract Is the One<br>That Never Leaves.</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell dark">
+        <div class="stat-num">+$4.2B</div>
+        <div class="stat-label">Annual net positive<br>impact by Year 3</div>
+      </div>
+      <div class="stat-cell dark">
+        <div class="stat-num">4,800</div>
+        <div class="stat-label">Businesses lost<br>per year to exits</div>
+      </div>
+      <div class="stat-cell dark">
+        <div class="stat-num">$187K</div>
+        <div class="stat-label">Avg annual tax revenue<br>per lost firm</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>New York City loses roughly <strong>4,800 small businesses per year</strong> to jurisdictions with lower costs, simpler permitting, and more predictable operating environments. These are not failing businesses. They are profitable businesses making a rational calculation.</p>
+      <p>For every business that closes in New York, the city absorbs: lost jobs (average 6.2 per firm), lost tax revenue (average $187,000 annually per firm), lost neighborhood commercial anchoring, and a signal to every remaining business owner that the math doesn't add up.</p>
+      <p>The conventional policy response has been recruitment — incentive packages, ribbon-cuttings, press releases about new firms choosing New York. This platform proposes a different thesis: <strong>retention is cheaper, faster, and more durable than recruitment.</strong></p>
+      <p>The nine reforms in this platform require no federal legislation, no new agencies, and no additional borrowing. They require political will, process reform, and the willingness to treat small business owners as the economic engine they actually are — not as a constituency to be managed.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"The cheapest business to attract is the one that never leaves."</p>
+    </div>
+
+    <div class="body-text">
+      <p>This is not a crisis of New York's ambition or its talent base. It is a crisis of administrative competence — of permit offices running on legacy systems, rent laws that protect only residential tenants, and an emergency financial infrastructure built for individuals, not entrepreneurs. Every problem identified in this platform has a known solution. Other cities have built them. New York has not.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     02 — THE PROBLEM
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">02 — The Problem</div>
+    <h1>What New York<br>Is Actually Losing</h1>
+    <div class="subtitle">New York City is home to 220,000 small businesses employing 1.1 million people. It is also the most expensive, most regulated, and most bureaucratically complex operating environment of any major American city.</div>
+  </div>
+  <div class="section-body">
+    <div class="body-text">
+      <p>The question is not whether businesses leave. They do. The question is whether the city understands what it loses when they do — and whether it has the political will to change.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Attrition Numbers</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>NYC</th>
+            <th>National Avg</th>
+            <th>Gap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Annual small biz closure rate</td><td>8.4%</td><td>5.9%</td><td class="highlight">+2.5 pts</td></tr>
+          <tr><td>Avg permit processing time</td><td>94 days</td><td>31 days</td><td class="highlight">+63 days</td></tr>
+          <tr><td>Commercial rent YoY increase</td><td>7.2%</td><td>3.1%</td><td class="highlight">+4.1 pts</td></tr>
+          <tr><td>Non-citizen biz loan approval rate</td><td>12%</td><td>38%</td><td class="highlight">−26 pts</td></tr>
+          <tr><td>Businesses citing cost as exit reason</td><td>71%</td><td>44%</td><td class="highlight">+27 pts</td></tr>
+          <tr><td>Annual jobs lost to business exits</td><td>29,800</td><td>N/A</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:10px;color:var(--gray-500);margin-top:8px;line-height:1.5;">Sources: NYC Dept. of Small Business Services (2025); U.S. Census Bureau; Federal Reserve Bank of New York; BLS.</div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">The Geography of Exit</div>
+      <div style="font-size:13px;color:var(--gray-700);margin-bottom:20px;line-height:1.6;">Businesses that leave New York do not disappear. They relocate — and take their jobs, tax payments, and supply chain relationships with them. The receiving cities did not win them with grand incentive packages. They won them by being less difficult to operate in.</div>
+      <div class="reloc-grid">
+        <div class="reloc-item">
+          <div class="reloc-bar-wrap"><div class="reloc-bar" style="height:100%;"></div></div>
+          <div class="reloc-pct">31%</div>
+          <div class="reloc-label">New Jersey</div>
+        </div>
+        <div class="reloc-item">
+          <div class="reloc-bar-wrap"><div class="reloc-bar" style="height:71%;"></div></div>
+          <div class="reloc-pct">22%</div>
+          <div class="reloc-label">Florida</div>
+        </div>
+        <div class="reloc-item">
+          <div class="reloc-bar-wrap"><div class="reloc-bar" style="height:61%;"></div></div>
+          <div class="reloc-pct">19%</div>
+          <div class="reloc-label">Texas</div>
+        </div>
+        <div class="reloc-item">
+          <div class="reloc-bar-wrap"><div class="reloc-bar" style="height:45%;"></div></div>
+          <div class="reloc-pct">14%</div>
+          <div class="reloc-label">Connecticut</div>
+        </div>
+        <div class="reloc-item">
+          <div class="reloc-bar-wrap"><div class="reloc-bar" style="height:26%;"></div></div>
+          <div class="reloc-pct">8%</div>
+          <div class="reloc-label">Georgia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     03 — WHY THEY LEAVE
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">03 — Why They Leave</div>
+    <h1>Exit Interviews from<br>a City in Denial</h1>
+    <div class="subtitle">ANI conducted structured exit conversations with 47 small business owners who relocated out of New York City between 2023 and 2025. Their reasons fall into four categories.</div>
+  </div>
+  <div class="section-body">
+    <div class="exit-cards">
+      <div class="exit-card">
+        <div class="exit-card-num">61%</div>
+        <div class="exit-card-topic">1 — Commercial Rent</div>
+        <div class="exit-card-text">61% cited lease renewal as the triggering event. The average commercial rent increase at renewal was 34% — not over five years, but in a single lease cycle. There is no planning model that absorbs that. Many had operated profitably for a decade before a single renewal conversation ended their tenancy in New York.</div>
+      </div>
+      <div class="exit-card">
+        <div class="exit-card-num">58%</div>
+        <div class="exit-card-topic">2 — Permitting &amp; Compliance</div>
+        <div class="exit-card-text">58% cited permit timelines as "operationally incompatible" with running a business. One restaurateur spent $43,000 on consultant fees and 14 months waiting for a certificate of occupancy. He now operates in Hoboken, where the equivalent process took 19 days.</div>
+      </div>
+      <div class="exit-card">
+        <div class="exit-card-num">41%</div>
+        <div class="exit-card-topic">3 — Capital Access</div>
+        <div class="exit-card-text">41% cited inability to access SBA financing as a compounding factor. For non-citizen founders — 38% of NYC's small business base — the March 2026 federal rule change eliminated SBA access entirely. The city has no bridge product.</div>
+      </div>
+      <div class="exit-card">
+        <div class="exit-card-num">55%</div>
+        <div class="exit-card-topic">4 — Tax &amp; Administrative Burden</div>
+        <div class="exit-card-text">55% said the cumulative administrative load — filings, inspections, compliance requirements — consumed time equivalent to a part-time employee. Many could not afford that overhead. The system's complexity functions as a tax on time.</div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>"I didn't want to leave. I wanted the city to give me a reason to stay."</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     04 — THE POLICY PLATFORM
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">04 — The Policy Platform</div>
+    <h1>Nine Reforms.<br>Zero Federal Action<br>Required.</h1>
+    <div class="subtitle">Every reform sits within the authority of the City of New York and/or the State of New York. No congressional approval. No federal appropriation. No waiting.</div>
+  </div>
+  <div class="section-body">
+    <div class="reform-list">
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R1</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Commercial Rent Stabilization</div>
+          <div class="reform-list-desc">Cap renewal increases at CPI+2% for commercial tenants under 5,000 sq ft.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R2</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Permit Modernization</div>
+          <div class="reform-list-desc">Legislate a 90-day permit guarantee. No decision = automatic approval.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R3</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">SBA Access Bridge</div>
+          <div class="reform-list-desc">City-backed bridge loan fund for non-citizen entrepreneurs locked out of federal access.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R4</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Living-Wage Flex Credit</div>
+          <div class="reform-list-desc">Small business wage subsidy tied to retention of jobs above living wage threshold.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R5</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Micro-Enterprise Hubs</div>
+          <div class="reform-list-desc">Below-market city-owned commercial space in each of 5 anchor neighborhoods.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R6</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">One-Shot for Business</div>
+          <div class="reform-list-desc">Emergency financial relief program modeled on HRA One-Shot Deal.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R7</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Procurement Reform</div>
+          <div class="reform-list-desc">Mandatory 30% procurement set-aside from certified small businesses.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R8</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Tax Simplification</div>
+          <div class="reform-list-desc">Single consolidated filing portal; eliminate duplicate city/state filings.</div>
+        </div>
+      </div>
+      <div class="reform-list-item">
+        <div class="reform-list-tag">R9</div>
+        <div class="reform-list-content">
+          <div class="reform-list-name">Nighttime Economy Office</div>
+          <div class="reform-list-desc">Dedicated city office for after-dark commercial permitting and coordination.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R1 — COMMERCIAL RENT STABILIZATION
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R1</div>
+    <div class="section-label">Commercial Rent Stabilization</div>
+    <h1>Predictability Is the<br>Foundation of Planning</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">71%</div>
+        <div class="stat-label">of NYC small businesses cite rent as primary exit driver</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">34%</div>
+        <div class="stat-label">average renewal increase in a single lease cycle</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">new city spending required to pass this reform</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>Commercial tenants in New York City have no rent stabilization protections. A landlord can triple the rent at lease renewal for any reason or no reason. For a small business operating on 12–18% margins, a 30% rent increase is not a renegotiation — it is a closure event.</p>
+      <p>This reform extends rent stabilization principles to commercial tenants occupying spaces <strong>under 5,000 square feet</strong> who have operated continuously for 3+ years. Renewal increases would be capped at <strong>CPI + 2%</strong>, with exceptions for documented capital improvements.</p>
+      <p>Landlord opposition is expected and should be anticipated. The counter-argument is economic: stable commercial tenancy produces consistent, long-term rent income. Turnover costs landlords an average of <strong>8.5 months of lost rent</strong> per vacancy cycle. Stability serves both parties.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Tokyo, Japan</strong> — commercial tenancy law limits renewal increases to documented cost inflation. <strong style="color:var(--gold-light);">Amsterdam</strong> — CPI-linked commercial lease caps since 2019.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Pass local commercial rent stabilization bill</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">NYS Legislature</div>
+          <div class="req-text">Amend state commercial tenancy law</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Sign and direct SBS to implement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R2 — PERMIT MODERNIZATION
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R2</div>
+    <div class="section-label">Permit Modernization</div>
+    <h1>A 90-Day Guarantee.<br>No Decision =<br>Automatic Approval.</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">94 days</div>
+        <div class="stat-label">avg NYC permit processing time</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">31 days</div>
+        <div class="stat-label">national average permit time</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">14 mo.</div>
+        <div class="stat-label">avg full restaurant permitting in NYC</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>The average time to receive a building or renovation permit in New York City is 94 days. The national average is 31 days. For restaurants, the gap is larger: full operational permitting averages 14 months in NYC, compared to under 60 days in peer cities.</p>
+      <p>This reform requires all non-construction business permits to be processed within <strong>90 days of a complete application</strong>. If the agency fails to act within that window, the permit is deemed approved — a <strong>"deemed granted" provision</strong> already used in New Zealand, Singapore, and several EU jurisdictions.</p>
+      <p>The permit backlog is not a mystery. It is a known, mapped, solvable infrastructure problem. The agencies have documented it. The solutions are funded in other cities. What has been missing is the political requirement to fix it.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">New Zealand</strong> — deemed consent provision since 2012. <strong style="color:var(--gold-light);">Singapore</strong> — 48-hour food establishment licensing. <strong style="color:var(--gold-light);">Netherlands</strong> — silence = approval.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Pass 90-day permit guarantee legislation</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">DOB / DOH / SLA</div>
+          <div class="req-text">Digitize application processing systems</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Set agency performance benchmarks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R3 — SBA ACCESS BRIDGE
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R3</div>
+    <div class="section-label">SBA Access Bridge</div>
+    <h1>Closing the<br>Non-Citizen<br>Capital Gap</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">84,000</div>
+        <div class="stat-label">NYC businesses affected by SBA exclusion</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">38%</div>
+        <div class="stat-label">of NYC small biz ownership base is non-citizen</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">$200M</div>
+        <div class="stat-label">initial fund capitalization proposed</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>In March 2026, the federal government eliminated SBA 7(a) and 504 loan eligibility for non-citizen permanent residents and visa holders. In New York City, this affects an estimated <strong>38% of the small business ownership base — approximately 84,000 businesses.</strong></p>
+      <p>This reform establishes a City-backed bridge loan fund, capitalized at <strong>$200M initially</strong>, to provide working capital and expansion financing to non-citizen small business owners who meet the same creditworthiness standards as former SBA eligibility requirements.</p>
+      <p>The fund would be administered through existing CDFI infrastructure and the NYC Department of Small Business Services. Interest rates would mirror former SBA rates. The city recovers through a <strong>0.5% origination fee</strong> retained for fund sustainability.</p>
+      <p>This is not charity. It is gap financing for a creditworthy population that a federal rule change has arbitrarily excluded. The underwriting risk profile is identical to the SBA-eligible population that preceded the rule change.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Amsterdam</strong> — city-backed SME loan fund for immigrant entrepreneurs since 2018 (€85M deployed). CDFI infrastructure already exists in NYC — no new institutions required.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Capitalize fund via EO and budget allocation</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">SBS + CDFIs</div>
+          <div class="req-text">Design underwriting and deploy loans</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Authorize fund and annual appropriation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R4 — LIVING-WAGE FLEX CREDIT
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R4</div>
+    <div class="section-label">Living-Wage Flex Credit</div>
+    <h1>Reward Retention<br>of Quality Jobs</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">$21.25</div>
+        <div class="stat-label">NYC living wage threshold (2026)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">proposed wage premium credit rate</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">$2.30</div>
+        <div class="stat-label">city tax return per $1 of credit issued</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>New York City's living wage threshold is $21.25/hour. Many small businesses cannot sustain that wage floor across their full workforce without compressing margins to unsustainable levels — particularly in food service, retail, and personal care services.</p>
+      <p>This reform creates a city tax credit for small businesses that <strong>employ 3–25 workers</strong>, pay all workers at or above living wage, and have operated in NYC for at least 2 years. The credit equals <strong>30% of the wage premium above $18/hour</strong> for each qualifying employee.</p>
+      <p>The policy rationale is straightforward: the city benefits enormously when small businesses retain full-time workers at living wage. It reduces reliance on city services, strengthens household stability, and keeps money circulating in neighborhoods rather than leaving them.</p>
+      <p>Modeled on the Federal Work Opportunity Tax Credit, this reform is self-financing through the economic multiplier of retained employment — every job retained at living wage generates an estimated <strong>$2.30 in city tax revenue per dollar of credit issued.</strong></p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Seoul, South Korea</strong> — SME wage subsidy program retains 40,000 small employers annually at a 4:1 fiscal return ratio.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Pass living-wage flex credit legislation</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Dept. of Finance</div>
+          <div class="req-text">Design and administer credit program</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Sign and promote uptake</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R5 — MICRO-ENTERPRISE HUBS
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R5</div>
+    <div class="section-label">Micro-Enterprise Hubs</div>
+    <h1>Below-Market<br>Commercial Space in<br>Anchor Neighborhoods</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">5</div>
+        <div class="stat-label">hub locations in Year 1 (one per borough)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">below market rate for qualifying tenants</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">250+</div>
+        <div class="stat-label">businesses housed per hub at full capacity</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>The city owns real property. Much of it sits underutilized — former school buildings, city-owned vacant storefronts, underperforming parking structures. This reform converts a minimum of <strong>one city-owned commercial property per borough</strong> into a Micro-Enterprise Hub: subsidized commercial space at or below 30% of market rate rent.</p>
+      <p>Tenants would be selected through a competitive application process prioritizing businesses with demonstrated viability, local employment, and community service orientation. Tenure would be <strong>3-year renewable leases</strong> with a right of first refusal for renewal.</p>
+      <p>The hubs would also co-locate shared services: business licensing assistance, legal aid, bookkeeping support, and access to the proposed SBA Bridge Fund. Each hub functions as a small business resource center, not just a real estate vehicle.</p>
+      <p>Five hubs in Year 1 is a pilot. The scale target for Year 3 is fifteen — three per borough — housing approximately <strong>750 businesses at any one time</strong> and providing a stabilizing anchor in neighborhoods facing acute commercial displacement.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Barcelona</strong> — 22@ Innovation District. <strong style="color:var(--gold-light);">London</strong> — Meanwhile Space program (180+ locations). Both use underutilized city assets as commercial anchors.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Establish program via EO; identify properties</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Dept. of Citywide Services</div>
+          <div class="req-text">Convert and manage hub properties</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">SBS</div>
+          <div class="req-text">Run application process and shared services</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R6 — ONE-SHOT FOR BUSINESS
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R6</div>
+    <div class="section-label">One-Shot for Business</div>
+    <h1>Emergency Financial<br>Infrastructure for<br>Small Businesses</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">$15K</div>
+        <div class="stat-label">max one-time emergency grant per business</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">$50M</div>
+        <div class="stat-label">annual fund capitalization proposed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">4,000+</div>
+        <div class="stat-label">businesses aided per year at avg grant</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>New York City operates the One-Shot Deal — a program through HRA that provides emergency rental assistance to individuals facing eviction. The program is imperfect, but its existence means that a household facing a cash crisis has a structured intervention available. <strong>No equivalent exists for small businesses.</strong></p>
+      <p>This reform creates a Small Business Emergency Relief Fund, modeled directly on the One-Shot Deal, providing one-time grants of up to <strong>$15,000</strong> to small businesses facing imminent closure due to temporary cash flow crisis, natural disaster, or unforeseen operational disruption.</p>
+      <p>Eligibility would require 2+ years of operation, a documented crisis event, and demonstrated viability. The fund would be capitalized at <strong>$50M annually</strong>. At an average grant of $12,000, this funds over 4,000 businesses per year.</p>
+      <p>The argument against this program — that it rewards failure — misunderstands what it funds. These are viable businesses hit by discrete, temporary shocks. The grant is the difference between a business that recovers and one that closes permanently, taking its jobs with it.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p>Adapted from NYC HRA One-Shot Deal framework — the administrative infrastructure already exists. Requires a new appropriation and eligibility expansion, not a new system.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Authorize fund and appropriate $50M/yr</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">SBS + HRA</div>
+          <div class="req-text">Design eligibility and administer grants</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Sign legislation and announce program</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R7 — PROCUREMENT REFORM
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R7</div>
+    <div class="section-label">Procurement Reform</div>
+    <h1>30% Set-Aside.<br>Mandatory.<br>Monitored.</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">$82B</div>
+        <div class="stat-label">NYC annual procurement spend</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">9%</div>
+        <div class="stat-label">current share going to small businesses</div>
+      </div>
+      <div class="stat-cell dark">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">proposed mandatory set-aside target</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>The City of New York spends approximately <strong>$82 billion annually</strong> on goods and services. Currently, less than 9% of that procurement flows to certified small businesses. The gap between the policy goal and the operational reality is an enforcement problem, not a supply problem.</p>
+      <p>This reform mandates a <strong>30% procurement set-aside</strong> for certified small businesses across all city agencies, with quarterly public reporting and agency-level accountability tied to commissioner performance reviews. Non-compliance triggers a formal remediation process.</p>
+      <p>The reform also simplifies the M/WBE certification process — currently a 6–12 month process requiring 47 separate documents — to a <strong>standardized 30-day digital application</strong> with a single-agency determination and a binding timeline.</p>
+      <p>The economic case is direct: routing $24.6B annually to certified small businesses at scale would generate an estimated <strong>145,000 direct and indirect jobs</strong>, $3.2B in annual wage income, and a $7.8B multiplier effect through local supply chains.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">UK Crown Commercial Service</strong> — 33% SME procurement target with quarterly compliance reporting. <strong style="color:var(--gold-light);">US federal government</strong> — 23% small business target with agency scorecards.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Mandate 30% set-aside by local law</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Issue EO on agency accountability</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">MOCS</div>
+          <div class="req-text">Simplify M/WBE certification process</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R8 — TAX SIMPLIFICATION
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R8</div>
+    <div class="section-label">Tax Simplification</div>
+    <h1>One Filing.<br>One Window.<br>One Answer.</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">11</div>
+        <div class="stat-label">separate annual filings required in NYC</div>
+      </div>
+      <div class="stat-cell dark">
+        <div class="stat-num">1</div>
+        <div class="stat-label">proposed unified portal and annual filing</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">120 hrs</div>
+        <div class="stat-label">avg annual time spent on tax compliance</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>A New York City small business is currently required to navigate up to <strong>11 separate tax filings annually</strong> across city and state jurisdictions — business income tax, commercial rent tax, unincorporated business tax, sales tax, payroll tax, and more. Each has different deadlines, different forms, and different agencies.</p>
+      <p>This reform consolidates all city-level small business tax obligations into a <strong>single annual filing</strong> through a unified digital portal. The portal pre-populates from prior year data, integrates with state filing where agreement exists, and provides real-time estimated liability calculations throughout the year.</p>
+      <p>The compliance burden is not just a time cost. It is a precision cost: small errors across 11 filings generate audit exposure that large businesses with compliance departments absorb routinely but small businesses cannot. <strong>Simplification is also an equity measure.</strong></p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Estonia</strong> — unified digital tax filing for all business sizes since 2001; compliance time reduced by 80%. <strong style="color:var(--gold-light);">Singapore</strong> — single-window business compliance portal.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">City Council + DoF</div>
+          <div class="req-text">Pass unified filing legislation</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">Office of Technology</div>
+          <div class="req-text">Build and maintain the portal</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">NYS</div>
+          <div class="req-text">Negotiate state filing harmonization</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     R9 — NIGHTTIME ECONOMY OFFICE
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="reform-tag">Reform R9</div>
+    <div class="section-label">Nighttime Economy Office</div>
+    <h1>Infrastructure for<br>the City That<br>Never Sleeps</h1>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell">
+        <div class="stat-num">$35B</div>
+        <div class="stat-label">NYC nighttime economy annual revenue</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">300K</div>
+        <div class="stat-label">jobs in the nighttime economy</div>
+      </div>
+      <div class="stat-cell dark">
+        <div class="stat-num">100:1</div>
+        <div class="stat-label">estimated return on office investment</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>New York City's nighttime economy — bars, restaurants, clubs, music venues, late-night retail — generates an estimated <strong>$35 billion annually</strong> and employs 300,000 people. It is also the most heavily and inconsistently regulated sector of the city's commercial life.</p>
+      <p>Amsterdam and London have Nighttime Economy commissioners with real authority: they mediate noise complaints, coordinate with police, streamline late-night licensing, and serve as a single point of contact for venue operators. <strong>New York has no equivalent.</strong></p>
+      <p>This reform establishes a Nighttime Economy Office within City Hall with a Commissioner, a 24/7 operator hotline, authority to mediate neighbor disputes, and responsibility for coordinating all agencies on after-hours commercial matters.</p>
+      <p>Budget: <strong>$4.2M annually</strong>. Estimated economic activity retained by preventing noise-complaint-driven closures and licensing delays: $420M. The return ratio is <strong>100:1</strong>. No other reform in this platform offers a more immediate and measurable fiscal return.</p>
+    </div>
+
+    <div class="global-model-box">
+      <div class="gm-label">Global Model</div>
+      <p><strong style="color:var(--gold-light);">Amsterdam</strong> Night Mayor (2012). <strong style="color:var(--gold-light);">London</strong> Night Czar (2016). <strong style="color:var(--gold-light);">Paris</strong> Night Mayor (2020). <strong style="color:var(--gold-light);">Zurich</strong> Night Mayor (2018). All four report measurable reductions in venue closures.</p>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;">What Passage Requires</div>
+      <div class="req-grid">
+        <div class="req-cell">
+          <div class="req-actor">Mayor's Office</div>
+          <div class="req-text">Appoint Commissioner via Executive Order</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">City Council</div>
+          <div class="req-text">Fund office via budget appropriation</div>
+        </div>
+        <div class="req-cell">
+          <div class="req-actor">SLA / NYPD / DOH</div>
+          <div class="req-text">Adopt inter-agency coordination protocol</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     14 — GLOBAL MODELS
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">14 — Global Models</div>
+    <h1>What Other Cities<br>Already Figured Out</h1>
+    <div class="subtitle">New York is not the first city to confront the tension between density, cost, and small business vitality. The playbook exists.</div>
+  </div>
+  <div class="section-body">
+    <div class="city-cards">
+      <div class="city-card">
+        <div class="city-sidebar">
+          <div class="city-name">Amsterdam</div>
+          <div class="city-country">Netherlands</div>
+        </div>
+        <div class="city-content">
+          <ul class="city-bullets">
+            <li>Night Mayor (2012) — single point of contact for after-hours operators</li>
+            <li>Immigrant entrepreneur loan fund — city-backed, €85M deployed since 2018</li>
+            <li>Commercial tenant protection — CPI-linked renewal caps on small commercial leases</li>
+          </ul>
+          <div class="city-result">Result: +22% small business retention over 5 years post-implementation.</div>
+        </div>
+      </div>
+      <div class="city-card">
+        <div class="city-sidebar">
+          <div class="city-name">Singapore</div>
+          <div class="city-country">Republic of Singapore</div>
+        </div>
+        <div class="city-content">
+          <ul class="city-bullets">
+            <li>48-hour F&amp;B licensing — digital, automated, 'deemed granted' provision</li>
+            <li>SME Go Digital program — city-subsidized technology adoption for small businesses</li>
+            <li>Startup SG Founder — co-investment grants matched to early-stage businesses</li>
+          </ul>
+          <div class="city-result">Result: Ranked #2 globally for ease of doing business; 94% small business survival at Year 3.</div>
+        </div>
+      </div>
+      <div class="city-card">
+        <div class="city-sidebar">
+          <div class="city-name">Seoul</div>
+          <div class="city-country">South Korea</div>
+        </div>
+        <div class="city-content">
+          <ul class="city-bullets">
+            <li>Self-Employed Person Support Center — one-stop advisory and financing</li>
+            <li>Wage subsidy for SMEs paying above minimum — 30% wage premium credit</li>
+            <li>Commercial district preservation zones — city manages gentrification pressure</li>
+          </ul>
+          <div class="city-result">Result: Small business survival rate 18% above OECD average; 40,000 jobs retained annually.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote" style="margin-top:8px;">
+      <p>The common thread across Amsterdam, Singapore, and Seoul is not ideology — it is operational competence. Each city identified its attrition problem, designed targeted interventions, funded them appropriately, and measured results.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     15 — ECONOMIC MODEL
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">15 — Economic Model</div>
+    <h1>The Numbers Behind<br>the Number</h1>
+    <div class="subtitle">Estimated annual net positive impact by Year 3: +$4.2B</div>
+  </div>
+  <div class="section-body">
+    <div class="stat-row stat-row-3">
+      <div class="stat-cell dark">
+        <div class="stat-num">+$4.2B</div>
+        <div class="stat-label">Annual net positive impact by Year 3</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">4,800</div>
+        <div class="stat-label">Businesses lost per year to exits</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">29,800</div>
+        <div class="stat-label">Jobs lost annually to business exits</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Three-Year Scenario Model</div>
+      <table class="scenario-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Biz Retained</th>
+            <th>Jobs</th>
+            <th>Tax Revenue</th>
+            <th>Net Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conservative (20% reduction)</td>
+            <td>960/yr</td>
+            <td>5,950</td>
+            <td>$179M</td>
+            <td class="impact-col">+$1.1B</td>
+          </tr>
+          <tr class="base">
+            <td>Base Case (35% reduction)</td>
+            <td>1,680/yr</td>
+            <td>10,400</td>
+            <td>$314M</td>
+            <td class="impact-col">+$4.2B</td>
+          </tr>
+          <tr>
+            <td>Optimistic (50% reduction)</td>
+            <td>2,400/yr</td>
+            <td>14,880</td>
+            <td>$449M</td>
+            <td class="impact-col">+$7.8B</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:10px;color:var(--gray-500);margin-top:8px;line-height:1.5;">Assumptions: avg 6.2 jobs/firm; avg $187K tax revenue/firm; 3-yr cumulative. Full methodology available on request.</div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Reform Cost vs. Return — Year 3, Base Case</div>
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Reform</th>
+            <th>Annual Cost</th>
+            <th>Return / Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>SBA Bridge Fund</td><td>$200M capitalization</td><td>$420M in loans deployed</td></tr>
+          <tr><td>Small Biz Emergency Relief</td><td>$50M/yr appropriation</td><td>3,300 businesses retained</td></tr>
+          <tr><td>Micro-Enterprise Hubs</td><td>$28M/yr (5 locations)</td><td>1,250 businesses stabilized</td></tr>
+          <tr><td>Nighttime Economy Office</td><td>$4.2M/yr</td><td>$420M economic activity retained</td></tr>
+          <tr><td>Living-Wage Flex Credit</td><td>$85M/yr tax credit</td><td>22,000 jobs at living wage</td></tr>
+          <tr><td>Tax Simplification Portal</td><td>$12M build + $3M/yr</td><td>120 hrs/biz saved annually</td></tr>
+          <tr><td>Permit Modernization</td><td>$8M system upgrade</td><td>63-day avg time reduction</td></tr>
+          <tr class="total-row"><td><strong>Total (Year 3 annualized)</strong></td><td>~$387M/yr</td><td class="impact-col">+$4.2B net positive</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull-quote">
+      <p>Every dollar invested in this platform returns an estimated <strong>$10.85 in economic value retained.</strong></p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     16 — COALITION MAP
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">16 — Coalition Map</div>
+    <h1>Who Needs<br>to Move</h1>
+    <div class="subtitle">These reforms do not require a single federal vote. They require movement from the following actors. No actor on this list lacks the authority. What has been missing is the alignment.</div>
+  </div>
+  <div class="section-body">
+    <div class="coalition-grid">
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">City Council</span>
+          <span class="coalition-role">Primary Legislative</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Pass Commercial Rent Stabilization (City Local Law)</li>
+            <li>Authorize Small Business Emergency Relief Fund ($50M/yr)</li>
+            <li>Establish Nighttime Economy Office (budget appropriation)</li>
+            <li>Mandate 30% procurement set-aside by local law</li>
+            <li>Legislate 90-day permit guarantee with deemed-granted provision</li>
+            <li>Pass Living-Wage Flex Credit legislation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">Mayor's Office</span>
+          <span class="coalition-role">Executive Action</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Establish Micro-Enterprise Hub program via Executive Order</li>
+            <li>Capitalize SBA Bridge Fund and direct SBS to deploy</li>
+            <li>Appoint Nighttime Economy Commissioner</li>
+            <li>Create unified tax filing portal (DoF + Office of Technology)</li>
+            <li>Set agency permit performance benchmarks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">NYS Legislature</span>
+          <span class="coalition-role">State Legislation</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Amend commercial tenancy law for rent stabilization</li>
+            <li>Harmonize state/city small business tax filings</li>
+            <li>Extend wage subsidy eligibility to NYC small businesses</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">CDFIs &amp; Banks</span>
+          <span class="coalition-role">Capital Partners</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Administer SBA Bridge Fund loans via existing infrastructure</li>
+            <li>Design emergency relief underwriting standards with SBS</li>
+            <li>Co-invest alongside Micro-Enterprise Hub tenants</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">Business Improvement Districts</span>
+          <span class="coalition-role">Implementation Partners</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Identify and nominate Micro-Enterprise Hub sites</li>
+            <li>Co-administer emergency relief applications at neighborhood level</li>
+            <li>Coordinate with Nighttime Economy Office on local mediation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coalition-card">
+        <div class="coalition-card-header">
+          <span class="coalition-actor">Real Estate Industry</span>
+          <span class="coalition-role">Stakeholder Engagement</span>
+        </div>
+        <div class="coalition-card-body">
+          <ul>
+            <li>Engage in Commercial Rent Stabilization rulemaking</li>
+            <li>Participate in design of capital improvement exemption framework</li>
+            <li>Provide vacancy data to inform Hub site selection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     17 — IMPLEMENTATION ROADMAP
+══════════════════════════════════════════════ -->
+<div class="page section-page">
+  <div class="section-header">
+    <div class="section-label">17 — Implementation</div>
+    <h1>The Three-Year<br>Roadmap</h1>
+    <div class="subtitle">This platform is sequenced for political reality. Year 1 actions are purely executive — no new legislation required. Each stage builds momentum and proof points for the next.</div>
+  </div>
+  <div class="section-body">
+    <div class="roadmap-year">
+      <div class="year-header">
+        <div class="year-badge">Year 1 — 2027</div>
+        <div class="year-title">Executive Action &amp; Design</div>
+      </div>
+      <div class="roadmap-items">
+        <div class="roadmap-q">Q1 2027</div><div class="roadmap-action">Establish Nighttime Economy Office (Executive Order)</div>
+        <div class="roadmap-q">Q1 2027</div><div class="roadmap-action">Launch Micro-Enterprise Hub site selection (all 5 boroughs)</div>
+        <div class="roadmap-q">Q2 2027</div><div class="roadmap-action">Engage CDFIs: SBA Bridge Fund design and capitalization</div>
+        <div class="roadmap-q">Q2 2027</div><div class="roadmap-action">DOB/DOH permit tracking dashboard launched publicly</div>
+        <div class="roadmap-q">Q3 2027</div><div class="roadmap-action">SBA Bridge Fund pilot launch ($50M first tranche)</div>
+        <div class="roadmap-q">Q4 2027</div><div class="roadmap-action">Unified tax portal beta — city filings only</div>
+      </div>
+    </div>
+
+    <div class="roadmap-year">
+      <div class="year-header">
+        <div class="year-badge">Year 2 — 2028</div>
+        <div class="year-title">Legislative &amp; Scale</div>
+      </div>
+      <div class="roadmap-items">
+        <div class="roadmap-q">Q1 2028</div><div class="roadmap-action">City Council: 90-day permit guarantee legislation</div>
+        <div class="roadmap-q">Q1 2028</div><div class="roadmap-action">City Council: 30% procurement set-aside mandate</div>
+        <div class="roadmap-q">Q2 2028</div><div class="roadmap-action">Small Business Emergency Relief Fund launch ($50M)</div>
+        <div class="roadmap-q">Q2 2028</div><div class="roadmap-action">Living-Wage Flex Credit enacted and promoted</div>
+        <div class="roadmap-q">Q3 2028</div><div class="roadmap-action">SBA Bridge Fund full deployment ($200M)</div>
+        <div class="roadmap-q">Q4 2028</div><div class="roadmap-action">Micro-Enterprise Hubs: all 5 sites operational</div>
+      </div>
+    </div>
+
+    <div class="roadmap-year">
+      <div class="year-header">
+        <div class="year-badge">Year 3 — 2029</div>
+        <div class="year-title">State Partnership &amp; Durability</div>
+      </div>
+      <div class="roadmap-items">
+        <div class="roadmap-q">Q1 2029</div><div class="roadmap-action">Albany: Commercial Rent Stabilization legislation</div>
+        <div class="roadmap-q">Q1 2029</div><div class="roadmap-action">Albany: State/city tax filing harmonization compact</div>
+        <div class="roadmap-q">Q2 2029</div><div class="roadmap-action">Nighttime Economy Office: full inter-agency authority</div>
+        <div class="roadmap-q">Q3 2029</div><div class="roadmap-action">Program evaluation: retention KPIs vs. Year 1 baseline</div>
+        <div class="roadmap-q">Q4 2029</div><div class="roadmap-action">Public impact report: Year 3 economic assessment</div>
+      </div>
+    </div>
+
+    <div style="font-size:12px;color:var(--gray-500);line-height:1.6;padding-top:4px;">Progress against this roadmap will be tracked publicly through an annual ANI Scorecard published each January. Metrics: businesses retained, permits processed within 90 days, SBA Bridge Fund loans deployed, hub occupancy rates, procurement set-aside compliance by agency.</div>
+  </div>
+  <div class="page-footer">
+    <span class="footer-institute">AmericaNext Institute</span>
+    <span class="footer-title">THE RETENTION ECONOMY · 2026</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     18 — CLOSING
+══════════════════════════════════════════════ -->
+<div class="page closing-page">
+  <div class="closing-main">
+    <div class="section-label">18 — Closing</div>
+    <div class="closing-title">New York,<br>By Choice.</div>
+    <div class="closing-body">
+      <p>The reforms in this platform are not expensive. They are not experimental. They are not ideologically charged. They are <strong>operational corrections</strong> to a system that has drifted, incrementally, into a posture that makes it harder to stay in New York than to leave.</p>
+      <p>The businesses that built this city's commercial neighborhoods did not do so because New York was the easiest place to operate. They did so because it was the most compelling. The density of talent, the access to customers, the culture of ambition — these things are not diminished. What has diminished is the city's willingness to meet that ambition with competent administration.</p>
+
+      <div class="closing-quote">
+        <p>No federal action required. No new agencies. No additional borrowing. The authority to act sits entirely with the city and state. The question is whether the people who hold that authority will use it.</p>
+      </div>
+
+      <p>I did not write this as an outsider. I wrote it as someone who chose New York deliberately — who has watched it lose people it cannot afford to lose, and who believes, on the evidence, that it can stop.</p>
+      <p>The cheapest business to attract is the one that never leaves. This platform is about keeping what we already have.</p>
+
+      <div class="closing-sig">
+        <div class="sig-name">Simba Garaba</div>
+        <div class="sig-title">Co-Founder, AmericaNext Institute<br>New York, NY · June 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="closing-footer">
+    <span class="institute">AmericaNext Institute</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;">americanext institute · new york, by choice.</span>
+  </div>
+</div>
+
+</body>
+</html>
