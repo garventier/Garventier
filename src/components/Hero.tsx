@@ -16,4 +16,3 @@ export default function Hero() {
       </div>
     </>
   );
-}Update Hero Component
