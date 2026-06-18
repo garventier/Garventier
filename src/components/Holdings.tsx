@@ -36,4 +36,3 @@ export default function Holdings() {
       </div>
     </div>
   );
-}Add Holdings Component
