@@ -1,39 +1,19 @@
-
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <span className="eyebrow">
-            Independent Investment Firm
-          </span>
-
-          <h1>
-            Independent.<br />
-            Aligned.<br />
-            Enduring.
-          </h1>
-
-          <p>
-            Garventier invests with long-term discipline,
-            global perspective, and aligned partnership.
-          </p>
-
-          <div className="hero-actions">
-            <a href="#" className="gold-btn">
-              Learn More
-            </a>
-
-            <a href="#" className="outline-btn">
-              Partner Access
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-image">
-          <img src="/images/hero-image.jpg" alt="Garventier" />
-        </div>
+    <>
+      <div className="hero">
+        <div className="accent-bar" />
+        <p className="tagline">&ldquo;We do not sell convictions.&rdquo;</p>
       </div>
-    </section>
-  )
-}
+
+      <div className="statement-section">
+        <p className="statement-text">
+          Garventier Capital deploys permanent capital into the physical,
+          digital, and commercial foundations of the global economy —
+          backing the vital infrastructure, cornerstone institutions, and
+          private operating engines built to compound for the long run.
+        </p>
+      </div>
+    </>
+  );
+}Update Hero Component
