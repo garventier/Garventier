@@ -1,1 +1,18 @@
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Garventier Capital",
+  description: "Permanent capital for exceptional businesses.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
