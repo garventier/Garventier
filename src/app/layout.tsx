@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter, Source_Serif_4, Cormorant_Garamond } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +12,13 @@ const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-source-serif",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -31,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sourceSerif.variable}`}>
+      <body className={`${inter.variable} ${sourceSerif.variable} ${cormorant.variable}`}>
         {children}
       </body>
     </html>
