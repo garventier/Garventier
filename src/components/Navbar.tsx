@@ -51,4 +51,3 @@ export default function Navbar() {
       </div>
     </>
   );
-}Update Navbar with mobile menu
