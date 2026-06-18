@@ -43,4 +43,3 @@ export default function Thesis() {
       </div>
     </div>
   );
-}Add Thesis Component
