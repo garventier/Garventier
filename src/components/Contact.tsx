@@ -6,3 +6,4 @@ export default function Contact() {
       <span className="contact-email">partners@garventier.com</span>
     </div>
   );
+}
