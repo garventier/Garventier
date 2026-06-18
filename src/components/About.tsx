@@ -33,4 +33,3 @@ export default function About() {
       </p>
     </div>
   );
-}Update About Component
