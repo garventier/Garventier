@@ -1,4 +1,4 @@
-"use client";
+use client";
 
 import { useState } from "react";
 
@@ -19,6 +19,15 @@ export default function Navbar() {
     <>
       <nav className="nav">
         <span className="logo">GARVENTIER</span>
+
+        <div className="nav-links">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </div>
+
         <button
           className="menu-btn"
           aria-label="Open menu"
@@ -41,7 +50,7 @@ export default function Navbar() {
           aria-label="Close menu"
           onClick={() => setOpen(false)}
         >
-          &times;
+          ×
         </button>
         {NAV_LINKS.map((link) => (
           <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
