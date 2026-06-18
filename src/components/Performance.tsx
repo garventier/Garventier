@@ -2,7 +2,7 @@ export default function Performance() {
   return (
     <div className="section" id="performance">
       <p className="label">Performance</p>
-      <p className="section-title">Track record</p>
+      <p className="section-title">Growth of Capital Since Inception</p>
       <div className="stats">
         <div className="stat">
           <p className="stat-label">GEQ — Flagship</p>
@@ -18,4 +18,3 @@ export default function Performance() {
       </p>
     </div>
   );
-}Add Performance Component
