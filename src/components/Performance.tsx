@@ -18,3 +18,4 @@ export default function Performance() {
       </p>
     </div>
   );
+}
