@@ -36,4 +36,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}Update layout.tsx with new fonts.
+}
