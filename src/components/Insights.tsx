@@ -1,31 +1,16 @@
-
 export default function Insights() {
   return (
-    <section className="insights-section">
-      <div className="container insights-grid">
-        <div>
-          <img src="/images/article-on-inevitabilities.jpg" alt="Featured Article" />
-        </div>
-
-        <div className="insights-copy">
-          <span className="section-label">
-            Featured Letter
+    <div className="section" id="insights">
+      <p className="label">Insights</p>
+      <p className="section-title">Insights</p>
+      <div className="writing">
+        <div className="post">
+          <span className="post-title">
+            On inevitabilities: the framework behind our investments
           </span>
-
-          <h2>
-            The Discipline of Enduring Capital
-          </h2>
-
-          <p>
-            Long-term investing increasingly requires
-            independence from consensus and clarity of perspective.
-          </p>
-
-          <a href="#" className="text-link">
-            Read Article →
-          </a>
+          <span className="post-date">Mar 2026</span>
         </div>
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+}Update Insights Component
