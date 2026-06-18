@@ -47,4 +47,3 @@ export default function CoreValues() {
       </div>
     </div>
   );
-}Add CoreValues Component
