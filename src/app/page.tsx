@@ -1,20 +1,27 @@
-
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Framework from '@/components/Framework'
-import Insights from '@/components/Insights'
-import Footer from '@/components/Footer'
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import CoreValues from "@/components/CoreValues";
+import Holdings from "@/components/Holdings";
+import Performance from "@/components/Performance";
+import Thesis from "@/components/Thesis";
+import Insights from "@/components/Insights";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="wrap">
       <Navbar />
       <Hero />
       <About />
-      <Framework />
+      <CoreValues />
+      <Holdings />
+      <Performance />
+      <Thesis />
       <Insights />
+      <Contact />
       <Footer />
     </main>
-  )
-}
+  );
+}Update page.tsx with new sections.
