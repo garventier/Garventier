@@ -1,25 +1,54 @@
+"use client";
+
+import { useState } from "react";
+
+const NAV_LINKS = [
+  { href: "#about", label: "About Us" },
+  { href: "#values", label: "Core Values" },
+  { href: "#holdings", label: "Holdings" },
+  { href: "#performance", label: "Performance" },
+  { href: "#thesis", label: "Investment Thesis" },
+  { href: "#insights", label: "Insights" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="navbar">
-      <div className="container navbar-inner">
-        <div className="brand">
-          <img src="/logos/logo-primary-gold-white.png" alt="Garventier" />
-        </div>
+    <>
+      <nav className="nav">
+        <span className="logo">GARVENTIER</span>
+        <button
+          className="menu-btn"
+          aria-label="Open menu"
+          onClick={() => setOpen(true)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
 
-        <nav>
-          <a href="#">Overview</a>
-          <a href="#">About</a>
-          <a href="#">Investments</a>
-          <a href="#">Strategy</a>
-          <a href="#">Insights</a>
-          <a href="#">Contact</a>
-        </nav>
+      <div
+        className={`overlay ${open ? "show" : ""}`}
+        onClick={() => setOpen(false)}
+      />
 
-        <a href="#" className="partner-btn">
-          Partner Access
-        </a>
+      <div className={`menu-panel ${open ? "open" : ""}`}>
+        <button
+          className="menu-close"
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+        >
+          &times;
+        </button>
+        {NAV_LINKS.map((link) => (
+          <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            {link.label}
+          </a>
+        ))}
       </div>
-    </header>
-  )
-}
+    </>
+  );
+}Update Navbar with mobile menu
