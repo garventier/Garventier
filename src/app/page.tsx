@@ -24,4 +24,4 @@ export default function HomePage() {
       <Footer />
     </main>
   );
-}Update page.tsx with new sections.
+}
