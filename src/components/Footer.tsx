@@ -5,3 +5,4 @@ export default function Footer() {
       <span className="footer-right">We do not sell convictions.</span>
     </footer>
   );
+}
