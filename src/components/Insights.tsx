@@ -13,4 +13,3 @@ export default function Insights() {
       </div>
     </div>
   );
-}Update Insights Component
