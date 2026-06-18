@@ -1,17 +1,8 @@
-
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-inner">
-        <div className="footer-brand">
-          <img src="/logos/logo-primary-gold-white.png" alt="Garventier" />
-        </div>
-
-        <p>
-          Independent investment firm focused on disciplined
-          long-term capital allocation.
-        </p>
-      </div>
+      <span className="footer-left">© 2026 Garventier Capital. New York.</span>
+      <span className="footer-right">We do not sell convictions.</span>
     </footer>
-  )
-}
+  );
+}Update Footer Component
