@@ -1,36 +1,39 @@
-
-import './globals.css'
-import { Inter, Cormorant_Garamond } from 'next/font/google'
+import "./globals.css";
+import { Inter, Source_Serif_4 } from "next/font/google";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter'
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  variable: '--font-cormorant',
-  weight: ['300','400','500','600','700']
-})
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-source-serif",
+  display: "swap",
+});
 
 export const metadata = {
-  title: 'Garventier',
-  description: 'Independent. Aligned. Enduring.',
+  title: "Garventier Capital",
+  description:
+    "Garventier Capital is a permanent capital investment firm backing the vital infrastructure, cornerstone institutions, and private operating engines built to compound for the long run.",
   icons: {
-    icon: '/favicon.png',
+    icon: "/favicon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable}`}>
+      <body className={`${inter.variable} ${sourceSerif.variable}`}>
         {children}
       </body>
     </html>
-  )
-}
+  );
+}Update layout.tsx with new fonts.
