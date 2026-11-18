@@ -23,6 +23,12 @@ const [open, setOpen] = useState(false);
 const menuButton = useRef<HTMLButtonElement>(null);
 const menuPanel = useRef<HTMLDivElement>(null);
 useEffect(() => {
+ const desktop = window.matchMedia("(min-width: 851px)");
+ const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+ desktop.addEventListener("change", closeOnDesktop);
+ return () => desktop.removeEventListener("change", closeOnDesktop);
+}, []);
+useEffect(() => {
  if (!open) return;
  const previous = document.body.style.overflow;
  document.body.style.overflow = "hidden";
